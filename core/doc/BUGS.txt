@@ -1,0 +1,6 @@
+
+Error message when aborting the command luajit-2.0.0-beta7 core/test/functional.lua
+
+Inconsistency detected by ld.so: dl-close.c: 731: _dl_close: Assertion `map->l_init_called' failed!
+
+=> seems to come from OpenAL. Buggy piece of shit imho

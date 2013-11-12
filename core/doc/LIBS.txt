@@ -1,0 +1,21 @@
+Libraries used in the Jade Framework:
+
+enet 1.3.0
+SFML 1.6
+CSFML 1.6
+Mongo C driver
+rt (linux only)
+
+Linux dependencies:
+libsndfile1-dev
+libopenal-dev
+
+
+Requires LuaJIT 2.0 beta7 at least to run (linux only).
+
+If you want to use mongodb, you need a running mongod daemon.
+
+WINDOWS SPECIFICS
+.dlls in root
+.dlls in core/resources/lib/winXX
+luajit.exe in root

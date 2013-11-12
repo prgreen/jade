@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../../files/core.html">core.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/database/mongo.html">database/mongo.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/database/tables.html">database/tables.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/event/jade.html">event/jade.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/multimedia/sfml.html">multimedia/sfml.lua</a>
+	</li>
+
+	<li><strong>network/enet.lua</strong></li>
+	
+	<li>
+		<a href="../../files/resources/testdata/test_bench.html">resources/testdata/test_bench.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/resources/testdata/test_table.html">resources/testdata/test_table.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/bench.html">test/bench.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/client.html">test/client.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/functional.html">test/functional.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/pathfinding.html">test/pathfinding.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/protocol.html">test/protocol.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/server.html">test/server.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/unit.html">test/unit.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/debug.html">utils/debug.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/grid.html">utils/grid.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/json.html">utils/json.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/list.html">utils/list.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/luaunit.html">utils/luaunit.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/pickle.html">utils/pickle.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/time.html">utils/time.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>network/enet.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#M.disconnect">M.disconnect</a>&nbsp;(p)</td>
+	<td class="summary">Disconnect from given peer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.dosend">M.dosend</a>&nbsp;(host, peer, message)</td>
+	<td class="summary">Send a packet immediately to a peer (less efficient than M.send!).</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.exit">M.exit</a>&nbsp;(host)</td>
+	<td class="summary">Exit a client or server.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.init_client">M.init_client</a>&nbsp;(arg_port, arg_address)</td>
+	<td class="summary">Init a client for a given port and server address.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.init_server">M.init_server</a>&nbsp;(port)</td>
+	<td class="summary">Init a server on given port.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.packet_destroy">M.packet_destroy</a>&nbsp;(p)</td>
+	<td class="summary">Destroy packet after it is used.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.send">M.send</a>&nbsp;(peer, message)</td>
+	<td class="summary">Send a packet to a peer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.send_unreliable">M.send_unreliable</a>&nbsp;(peer, message)</td>
+	<td class="summary">Send an unreliable packet to a peer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.type_event">M.type_event</a>&nbsp;(event)</td>
+	<td class="summary">Get event type from an event object (use with a switch after an update).</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.update">M.update</a>&nbsp;(host, event)</td>
+	<td class="summary">Update events on a host (client or server).</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.update_blocking">M.update_blocking</a>&nbsp;(host, event, t)</td>
+	<td class="summary">Update while blocking for a number of milliseconds.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="M.disconnect"></a><strong>M.disconnect</strong>&nbsp;(p)</dt>
+<dd>
+Disconnect from given peer.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  p: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.dosend"></a><strong>M.dosend</strong>&nbsp;(host, peer, message)</dt>
+<dd>
+Send a packet immediately to a peer (less efficient than M.send!).
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  host: Host who is sending the message.
+	</li>
+	
+	<li>
+	  peer: Peer to send the message to.
+	</li>
+	
+	<li>
+	  message: String message to transmit.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.exit"></a><strong>M.exit</strong>&nbsp;(host)</dt>
+<dd>
+Exit a client or server. Use this after client or server will not be used anymore.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  host: The host as returned by a call to M.init_client (client) or M.init_server (server).
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.init_client"></a><strong>M.init_client</strong>&nbsp;(arg_port, arg_address)</dt>
+<dd>
+Init a client for a given port and server address.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  arg_port: Port to use to contact server
+	</li>
+	
+	<li>
+	  arg_address: Address of the server
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+(3 variables returned!) "client", "peer" and "event"
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.init_server"></a><strong>M.init_server</strong>&nbsp;(port)</dt>
+<dd>
+Init a server on given port.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  port: Port to use for server (ports under 1024 are usually reserved and must have root access)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+(2 variables returned!) "server", and "event"
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.packet_destroy"></a><strong>M.packet_destroy</strong>&nbsp;(p)</dt>
+<dd>
+Destroy packet after it is used.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  p: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.send"></a><strong>M.send</strong>&nbsp;(peer, message)</dt>
+<dd>
+Send a packet to a peer. Beware, packet is sent only after next call to M.update or M.update_blocking!
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  peer: Peer to send the message to.
+	</li>
+	
+	<li>
+	  message: String message to transmit.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.send_unreliable"></a><strong>M.send_unreliable</strong>&nbsp;(peer, message)</dt>
+<dd>
+Send an unreliable packet to a peer. Beware, packet is sent only after next call to M.update or M.update_blocking!
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  peer: Peer to send the message to.
+	</li>
+	
+	<li>
+	  message: String message to transmit.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.type_event"></a><strong>M.type_event</strong>&nbsp;(event)</dt>
+<dd>
+Get event type from an event object (use with a switch after an update).
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  event: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.update"></a><strong>M.update</strong>&nbsp;(host, event)</dt>
+<dd>
+Update events on a host (client or server).
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  host: Host as returned by M.init_client or M.init_server.
+	</li>
+	
+	<li>
+	  event: Event as returned by same functions.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+Positive number if events were received.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.update_blocking"></a><strong>M.update_blocking</strong>&nbsp;(host, event, t)</dt>
+<dd>
+Update while blocking for a number of milliseconds.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  host: Host as returned by M.init_client or M.init_server.
+	</li>
+	
+	<li>
+	  event: Event as returned by same functions.
+	</li>
+	
+	<li>
+	  t: Time to use waiting for events.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+Positive number if events were received.
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

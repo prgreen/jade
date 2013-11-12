@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../../files/core.html">core.lua</a>
+	</li>
+
+	<li><strong>database/mongo.lua</strong></li>
+	
+	<li>
+		<a href="../../files/database/tables.html">database/tables.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/event/jade.html">event/jade.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/multimedia/sfml.html">multimedia/sfml.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/network/enet.html">network/enet.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/resources/testdata/test_bench.html">resources/testdata/test_bench.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/resources/testdata/test_table.html">resources/testdata/test_table.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/bench.html">test/bench.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/client.html">test/client.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/functional.html">test/functional.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/pathfinding.html">test/pathfinding.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/protocol.html">test/protocol.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/server.html">test/server.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/test/unit.html">test/unit.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/debug.html">utils/debug.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/grid.html">utils/grid.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/json.html">utils/json.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/list.html">utils/list.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/luaunit.html">utils/luaunit.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/pickle.html">utils/pickle.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/utils/time.html">utils/time.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>database/mongo.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#M.bson_buffer_init">M.bson_buffer_init</a>&nbsp;(buf)</td>
+	<td class="summary">Initialize a BSON buffer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.bson_from_buffer">M.bson_from_buffer</a>&nbsp;(b, buf)</td>
+	<td class="summary">Create a BSON object from a BSON buffer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.connect">M.connect</a>&nbsp;(conn, host, port)</td>
+	<td class="summary">Connect to a MongoDB database on given host and port.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.create_bson">M.create_bson</a>&nbsp;()</td>
+	<td class="summary">Create a BSON object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.create_connection">M.create_connection</a>&nbsp;()</td>
+	<td class="summary">Create a connection object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.create_cursor">M.create_cursor</a>&nbsp;()</td>
+	<td class="summary">Create a cursor object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.cursor_next">M.cursor_next</a>&nbsp;(cursor)</td>
+	<td class="summary">Get next element of a cursor.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.empty">M.empty</a>&nbsp;()</td>
+	<td class="summary">Create an empty BSON object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.insert_table">M.insert_table</a>&nbsp;(conn, collection, t)</td>
+	<td class="summary">Insert a Lua Table inside the database.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.query_all">M.query_all</a>&nbsp;(conn, collection)</td>
+	<td class="summary">Query all elements of a given collection.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#M.remove">M.remove</a>&nbsp;(conn, collection, cond)</td>
+	<td class="summary">Remove elements in a collection.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="M.bson_buffer_init"></a><strong>M.bson_buffer_init</strong>&nbsp;(buf)</dt>
+<dd>
+Initialize a BSON buffer.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  buf: BSON buffer to initialize.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.bson_from_buffer"></a><strong>M.bson_from_buffer</strong>&nbsp;(b, buf)</dt>
+<dd>
+Create a BSON object from a BSON buffer. The buffer object is now owned and destroyed properly by the BSON object.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  b: BSON object.
+	</li>
+	
+	<li>
+	  buf: BSON buffer.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.connect"></a><strong>M.connect</strong>&nbsp;(conn, host, port)</dt>
+<dd>
+Connect to a MongoDB database on given host and port. Use this function with an object created by M.create_connection.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  conn: Connection object.
+	</li>
+	
+	<li>
+	  host: String containing IP address or hostname (default: "127.0.0.1").
+	</li>
+	
+	<li>
+	  port: Number of the port used by Mongo daemon (default: 27017).
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.create_bson"></a><strong>M.create_bson</strong>&nbsp;()</dt>
+<dd>
+Create a BSON object.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.create_connection"></a><strong>M.create_connection</strong>&nbsp;()</dt>
+<dd>
+Create a connection object. Use it first with M.connect, then you can run commands to the connected MongoDB database.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.create_cursor"></a><strong>M.create_cursor</strong>&nbsp;()</dt>
+<dd>
+Create a cursor object.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.cursor_next"></a><strong>M.cursor_next</strong>&nbsp;(cursor)</dt>
+<dd>
+Get next element of a cursor.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  cursor: Cursor on which to iterate
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+true or false, should be used in a "while" loop
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.empty"></a><strong>M.empty</strong>&nbsp;()</dt>
+<dd>
+Create an empty BSON object.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.insert_table"></a><strong>M.insert_table</strong>&nbsp;(conn, collection, t)</dt>
+<dd>
+Insert a Lua Table inside the database. Arbitrary depths not yet implemented.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  conn: Connection object already connected to a given database.
+	</li>
+	
+	<li>
+	  collection: String containing the name of the database and collection in which to insert the table (example: "test.persons")
+	</li>
+	
+	<li>
+	  t: Table to save.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.query_all"></a><strong>M.query_all</strong>&nbsp;(conn, collection)</dt>
+<dd>
+Query all elements of a given collection.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  conn: Connection object already connected to a database.
+	</li>
+	
+	<li>
+	  collection: String containing database and collection (example: "test.persons")
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+Cursor upon which M.cursor_next should be used to iterate on all queried elements.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="M.remove"></a><strong>M.remove</strong>&nbsp;(conn, collection, cond)</dt>
+<dd>
+Remove elements in a collection.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  conn: Connection object already connected to a database.
+	</li>
+	
+	<li>
+	  collection: String containing database and collection (example: "test.persons")
+	</li>
+	
+	<li>
+	  cond: BSON object containing a condition to remove only certain objects in the collection. (not implemented yet)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

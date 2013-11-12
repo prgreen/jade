@@ -1,0 +1,14 @@
+- Units tests for jade events.
+- Authentication scheme (and admin rights) for jade events.
+- SFML helper for jade events.
+- Helper functions to wait for a number of ticks/second, wait for an event with a timeout. Check possibility of using several triggers for a same function.
+- "Jade objects" that retain which coroutines belong to them, intercomm and pub/sub. Maybe use middleclass
+- An admin console to execute arbitrary lua commands while program is running
+- Security: no random string should crash the event system. Spammers should be IP banned.
+
+
+- Have a "patcher" library to download and patch new games from a server automatically.
+- Have a compression library like physfs.
+- Use compressed bytecode instead of visible scripts.
+
+- True lua async io with a thread pool, maybe libev-libeio

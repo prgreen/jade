@@ -1,0 +1,1 @@
+{"password":"toto","login":"test","connected":true,"subtable":{"subtable1":"ok","subtable2":{"subsub1":"fine","subsub2":1337.1337}},"number":45}

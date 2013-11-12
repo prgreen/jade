@@ -1,0 +1,1 @@
+luadoc * -d ./doc/luadoc
